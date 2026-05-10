@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Official site for Glass & Thorns — beautiful, dangerous, fragile, and unbroken." />
+  <meta property="og:title" content="Glass & Thorns" />
+  <meta property="og:description" content="Beautiful. Dangerous. Fragile. Unbroken." />
+  <meta property="og:type" content="website" />
+  <title>Glass & Thorns | Official Music Site</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav" aria-label="Primary navigation">
+      <a class="logo" href="#top">Glass & Thorns</a>
+      <div class="nav-links">
+        <a href="#music">Music</a>
+        <a href="#upcoming">Upcoming</a>
+        <a href="#about">About</a>
+        <a href="#links">Links</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero section">
+      <div class="hero-content">
+        <p class="eyebrow">Official artist site</p>
+        <h1>Glass & Thorns</h1>
+        <p class="tagline">Beautiful. Dangerous. Fragile. Unbroken.</p>
+        <p class="intro">
+          Dark emotional music for the parts of us that survived the breaking — fragile melodies, sharp edges, and songs that refuse to disappear.
+        </p>
+        <div class="button-row" id="links" aria-label="Artist links">
+          <a class="button primary" href="#" target="_blank" rel="noopener">Listen on Spotify</a>
+          <a class="button" href="#" target="_blank" rel="noopener">Instagram</a>
+          <a class="button" href="#" target="_blank" rel="noopener">YouTube</a>
+          <a class="button" href="#" target="_blank" rel="noopener">Apple Music</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section feature" id="music">
+      <div class="section-heading">
+        <p class="eyebrow">Latest release</p>
+        <h2>Now Streaming</h2>
+      </div>
+      <article class="release-card large-card">
+        <div class="cover-art placeholder-art" aria-hidden="true">
+          <span>G&T</span>
+        </div>
+        <div>
+          <p class="release-label">Latest single</p>
+          <h3>Replace With Song Title</h3>
+          <p>
+            Add a short one- or two-sentence description of the release here. Keep it emotional, direct, and easy to share.
+          </p>
+          <a class="text-link" href="#" target="_blank" rel="noopener">Listen now →</a>
+        </div>
+      </article>
+    </section>
+
+    <section class="section">
+      <div class="section-heading">
+        <p class="eyebrow">Biggest hits</p>
+        <h2>Start Here</h2>
+      </div>
+      <div class="card-grid">
+        <article class="song-card">
+          <h3>Song Title One</h3>
+          <p>Short description or mood note.</p>
+          <a href="#" target="_blank" rel="noopener">Play track →</a>
+        </article>
+        <article class="song-card">
+          <h3>Song Title Two</h3>
+          <p>Short description or mood note.</p>
+          <a href="#" target="_blank" rel="noopener">Play track →</a>
+        </article>
+        <article class="song-card">
+          <h3>Song Title Three</h3>
+          <p>Short description or mood note.</p>
+          <a href="#" target="_blank" rel="noopener">Play track →</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="section split" id="upcoming">
+      <div>
+        <p class="eyebrow">Upcoming releases</p>
+        <h2>What’s Next</h2>
+        <p>
+          Track upcoming singles, release dates, pre-save links, and announcements here.
+        </p>
+      </div>
+      <div class="timeline">
+        <article>
+          <time datetime="2026-00-00">Coming soon</time>
+          <h3>Upcoming Song Title</h3>
+          <p>Pre-save link or release note goes here.</p>
+        </article>
+        <article>
+          <time datetime="2026-00-00">TBA</time>
+          <h3>Future Release</h3>
+          <p>Add teaser text here.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section about" id="about">
+      <p class="eyebrow">About the artist</p>
+      <h2>Music for the beautiful damage.</h2>
+      <p>
+        Glass & Thorns lives in the space between tenderness and teeth — songs shaped by survival, heartbreak, rage, longing, and the strange hope that keeps growing through the cracks.
+      </p>
+      <p>
+        For listeners drawn to emotional alternative, post-emo acoustic, dark pop, screamo textures, and heavy cathartic release.
+      </p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Glass & Thorns. All rights reserved.</p>
+    <p class="footer-links">
+      <a href="#" target="_blank" rel="noopener">Spotify</a>
+      <a href="#" target="_blank" rel="noopener">Instagram</a>
+      <a href="mailto:hello@example.com">Contact</a>
+    </p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
