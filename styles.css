@@ -20,10 +20,7 @@ html {
 
 body {
   margin: 0;
-  background:
-    radial-gradient(circle at top, rgba(240,90,157,0.15), transparent 30%),
-    radial-gradient(circle at bottom right, rgba(214,163,255,0.12), transparent 35%),
-    var(--bg);
+  background: var(--bg);
   color: var(--text);
   font-family: Inter, system-ui, sans-serif;
   line-height: 1.6;
@@ -38,12 +35,12 @@ img {
   top: 0;
   z-index: 100;
   backdrop-filter: blur(16px);
-  background: rgba(9,9,9,0.7);
+  background: rgba(5,5,5,0.75);
   border-bottom: 1px solid var(--border);
 }
 
 .nav {
-  max-width: 1100px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 1rem 1.5rem;
   display: flex;
@@ -52,11 +49,21 @@ img {
 }
 
 .logo {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
   color: var(--text);
   text-decoration: none;
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
+}
+
+.logo img {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 .nav-links {
@@ -75,7 +82,7 @@ img {
 .nav-links a:hover,
 .footer-links a:hover,
 .text-link:hover {
-  color: var(--accent);
+  color: white;
 }
 
 .section {
@@ -85,13 +92,34 @@ img {
 }
 
 .hero {
-  min-height: 80vh;
+  position: relative;
+  min-height: 100vh;
   display: flex;
   align-items: center;
+  background:
+    linear-gradient(to bottom, rgba(0,0,0,0.65), rgba(0,0,0,0.9)),
+    url('assets/images/glass-and-thorns-hero.jpg') center center / cover no-repeat;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(255,255,255,0.03), transparent 45%);
 }
 
 .hero-content {
-  max-width: 720px;
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+.hero-logo {
+  width: 170px;
+  height: 170px;
+  object-fit: cover;
+  margin-bottom: 1.5rem;
+  border-radius: 50%;
+  box-shadow: 0 0 60px rgba(255,255,255,0.08);
 }
 
 .eyebrow {
@@ -119,12 +147,14 @@ h2 {
 
 .intro {
   font-size: 1.1rem;
-  max-width: 640px;
+  max-width: 720px;
+  margin: 0 auto;
 }
 
 .button-row {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 1rem;
   margin-top: 2rem;
 }
@@ -138,13 +168,13 @@ h2 {
   border: 1px solid var(--border);
   color: var(--text);
   text-decoration: none;
-  background: rgba(255,255,255,0.03);
+  background: rgba(255,255,255,0.05);
   transition: transform 0.2s ease, background 0.2s ease;
 }
 
 .button:hover {
   transform: translateY(-2px);
-  background: rgba(255,255,255,0.08);
+  background: rgba(255,255,255,0.1);
 }
 
 .button.primary {
@@ -252,5 +282,10 @@ h2 {
   .nav-links {
     flex-wrap: wrap;
     justify-content: center;
+  }
+
+  .hero-logo {
+    width: 130px;
+    height: 130px;
   }
 }
