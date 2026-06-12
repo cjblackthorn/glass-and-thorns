@@ -28,6 +28,7 @@ body {
 
 img {
   max-width: 100%;
+  height: auto;
 }
 
 .site-header {
@@ -93,9 +94,11 @@ img {
 
 .hero {
   position: relative;
-  min-height: 100vh;
+  min-height: calc(100vh - 120px);
+  min-height: calc(100svh - 120px);
   display: flex;
   align-items: center;
+  padding: 1rem 0 2rem;
   background:
     linear-gradient(to bottom, rgba(0,0,0,0.72), rgba(0,0,0,0.92)),
     url('assets/images/glass-and-thorns-cover.png') center center / cover no-repeat;
@@ -111,11 +114,15 @@ img {
   position: relative;
   z-index: 2;
   text-align: center;
+  padding-top: clamp(1.5rem, 3vh, 2rem);
+  padding-bottom: clamp(1.5rem, 3vh, 2rem);
 }
 
 .hero-logo-text {
-  width: min(700px, 90vw);
-  margin-bottom: 2rem;
+  width: min(260px, 56vw, 32vh);
+  width: min(260px, 56vw, 32svh);
+  object-fit: contain;
+  margin-bottom: 1rem;
   filter: drop-shadow(0 0 40px rgba(0,0,0,0.6));
 }
 
@@ -132,6 +139,11 @@ h1 {
   margin: 0.5rem 0 1rem;
 }
 
+.hero h1 {
+  font-size: clamp(2.75rem, 6vw, 4.75rem);
+  margin: 0.35rem 0 0.5rem;
+}
+
 h2 {
   font-size: clamp(2rem, 4vw, 3rem);
   margin-bottom: 1rem;
@@ -140,10 +152,12 @@ h2 {
 .tagline {
   font-size: 1.3rem;
   color: var(--muted);
+  margin: 0.5rem 0;
 }
 
 .intro {
   font-size: 1.1rem;
+  line-height: 1.45;
   max-width: 720px;
   margin: 0 auto;
 }
@@ -153,7 +167,7 @@ h2 {
   flex-wrap: wrap;
   justify-content: center;
   gap: 1rem;
-  margin-top: 2rem;
+  margin-top: 1.25rem;
 }
 
 .button {
@@ -185,21 +199,22 @@ h2 {
 .timeline article {
   background: var(--panel);
   border: 1px solid var(--border);
-  border-radius: 24px;
+  border-radius: 8px;
   box-shadow: var(--shadow);
 }
 
 .large-card {
   display: grid;
-  grid-template-columns: 280px 1fr;
+  grid-template-columns: minmax(320px, 1.35fr) 1fr;
   gap: 2rem;
+  align-items: center;
   padding: 2rem;
 }
 
 .cover-art {
-  aspect-ratio: 1 / 1;
-  border-radius: 18px;
-  object-fit: cover;
+  width: 100%;
+  border-radius: 8px;
+  object-fit: contain;
 }
 
 .card-grid {
@@ -232,7 +247,7 @@ h2 {
   padding: 1.5rem;
 }
 
-.timeline time {
+.timeline-date {
   color: var(--accent);
   font-size: 0.9rem;
 }
