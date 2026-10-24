@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://glassandthorns.art/sitemap.xml
