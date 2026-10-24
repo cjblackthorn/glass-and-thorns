@@ -287,3 +287,32 @@ h2 {
     justify-content: center;
   }
 }
+
+/* Visible focus and keyboard skip link, tuned for the dark visual theme. */
+.skip-link {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  z-index: 1100;
+  padding: .8rem 1rem;
+  border-radius: .5rem;
+  background: #fff;
+  color: #090909;
+  font-weight: 700;
+  transform: translateY(calc(-100% - 2rem));
+}
+.skip-link:focus { transform: none; }
+:where(a, button, input, select, textarea):focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+  box-shadow: 0 0 0 6px #090909;
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
