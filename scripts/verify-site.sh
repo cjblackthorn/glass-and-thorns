@@ -35,4 +35,10 @@ check_no_matches 'Glass & Thorns' index.html lyrics/index.html
 check_no_matches 'border-radius: 24px' styles.css lyrics/index.html
 check_no_matches 'aspect-ratio: 1 / 1' styles.css
 
+# Assert source-level accessibility baseline as well as brand/content checks.
+grep -q 'class="skip-link" href="#top"' index.html || fail "Homepage skip link missing"
+grep -q 'id="top" tabindex="-1"' index.html || fail "Main skip target not focusable"
+grep -q 'focus-visible' styles.css || fail "Visible keyboard focus style missing"
+grep -q 'prefers-reduced-motion' styles.css || fail "Reduced-motion style missing"
+
 printf 'Static site checks passed.\n'
